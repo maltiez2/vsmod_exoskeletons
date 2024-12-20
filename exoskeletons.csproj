@@ -4,7 +4,7 @@
     <ModName>Exoskeleton</ModName>
     <ModType>code</ModType>
     <ModVersion>0.0.0</ModVersion>
-    <ModId>exoskeleton</ModId>
+    <ModId>exoskeletons</ModId>
     <Description></Description>
     <Side>Universal</Side>
     <RequiredOnClient>true</RequiredOnClient>
