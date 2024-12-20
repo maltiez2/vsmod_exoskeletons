@@ -1,0 +1,186 @@
+{
+	"editor": {
+		"backDropShape": "E:/Programs/VSModelCreator/seraph",
+		"allAngles": true,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"cupronickel1": "game:block/metal/sheet-plain/cupronickel1"
+	},
+	"elements": [
+		{
+			"name": "ArmorUpperTorso",
+			"stepParentName": "UpperTorso",
+			"from": [ 5.0, 0.0, 2.0 ],
+			"to": [ 6.0, 5.0, 4.0 ],
+			"rotationOrigin": [ 5.0, 0.0, 2.0 ],
+			"faces": {
+				"north": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 5.0 ] },
+				"east": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 2.0, 5.0 ] },
+				"south": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 5.0 ] },
+				"west": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 2.0, 5.0 ] },
+				"up": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+				"down": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 2.0 ] }
+			},
+			"children": [
+				{
+					"name": "exo_0",
+					"from": [ 0.0, 4.0, 2.0 ],
+					"to": [ 1.0, 5.0, 6.0 ],
+					"rotationOrigin": [ 0.0, 4.0, 2.0 ],
+					"faces": {
+						"north": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"east": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 4.0, 1.0 ] },
+						"south": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"west": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 4.0, 1.0 ] },
+						"up": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 4.0 ] },
+						"down": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 4.0 ] }
+					},
+					"children": [
+						{
+							"name": "exo_1",
+							"from": [ -3.0, 0.0, 3.0 ],
+							"to": [ 0.0, 1.0, 4.0 ],
+							"rotationOrigin": [ 0.0, 0.0, 3.0 ],
+							"rotationY": 22.0,
+							"faces": {
+								"north": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 3.0, 1.0 ] },
+								"east": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"south": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 3.0, 1.0 ] },
+								"west": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"up": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 3.0, 1.0 ] },
+								"down": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 3.0, 1.0 ] }
+							}
+						}
+					]
+				},
+				{
+					"name": "exo_2",
+					"from": [ 0.0, 4.0, -4.0 ],
+					"to": [ 1.0, 5.0, 0.0 ],
+					"rotationOrigin": [ 0.0, 4.0, -4.0 ],
+					"faces": {
+						"north": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"east": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 4.0, 1.0 ] },
+						"south": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"west": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 4.0, 1.0 ] },
+						"up": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 4.0 ] },
+						"down": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 4.0 ] }
+					},
+					"children": [
+						{
+							"name": "exo_3",
+							"from": [ -3.0, 0.0, 0.0 ],
+							"to": [ 0.0, 1.0, 1.0 ],
+							"rotationOrigin": [ 0.0, 0.0, 1.0 ],
+							"rotationY": -22.0,
+							"faces": {
+								"north": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 3.0, 1.0 ] },
+								"east": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"south": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 3.0, 1.0 ] },
+								"west": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+								"up": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 3.0, 1.0 ] },
+								"down": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 3.0, 1.0 ] }
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ArmorUpperArmR",
+			"stepParentName": "UpperArmR",
+			"from": [ 1.0, 0.0, -1.0 ],
+			"to": [ 2.0, 7.0, 0.0 ],
+			"rotationOrigin": [ 1.0, 0.0, -1.0 ],
+			"faces": {
+				"north": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"east": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"south": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"west": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"up": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"down": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+			},
+			"children": [
+				{
+					"name": "exo_5",
+					"from": [ -0.5, -0.5, -0.5 ],
+					"to": [ 1.5, 1.5, 0.5 ],
+					"rotationOrigin": [ -0.5, -0.5, -0.5 ],
+					"faces": {
+						"north": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 2.0, 2.0 ] },
+						"east": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+						"south": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 2.0, 2.0 ] },
+						"west": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+						"up": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+						"down": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 2.0, 1.0 ] }
+					}
+				}
+			]
+		},
+		{
+			"name": "ArmorLowerArmR",
+			"stepParentName": "LowerArmR",
+			"from": [ 1.0, 1.0, -1.0 ],
+			"to": [ 2.0, 8.0, 0.0 ],
+			"rotationOrigin": [ 1.0, 1.0, -1.0 ],
+			"faces": {
+				"north": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"east": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"south": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"west": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"up": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"down": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+			}
+		},
+		{
+			"name": "ArmorUpperArmL",
+			"stepParentName": "UpperArmL",
+			"from": [ 1.0, 0.0, 2.0 ],
+			"to": [ 2.0, 7.0, 3.0 ],
+			"rotationOrigin": [ 1.0, 0.0, 2.0 ],
+			"faces": {
+				"north": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"east": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"south": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"west": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"up": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"down": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+			},
+			"children": [
+				{
+					"name": "exo_4",
+					"from": [ -0.5, -0.5, 0.5 ],
+					"to": [ 1.5, 1.5, 1.5 ],
+					"rotationOrigin": [ -0.5, -0.5, 0.5 ],
+					"faces": {
+						"north": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 2.0, 2.0 ] },
+						"east": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+						"south": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 2.0, 2.0 ] },
+						"west": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+						"up": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+						"down": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 2.0, 1.0 ] }
+					}
+				}
+			]
+		},
+		{
+			"name": "ArmorLowerArmL",
+			"stepParentName": "LowerArmL",
+			"from": [ 1.0, 1.0, 2.0 ],
+			"to": [ 2.0, 8.0, 3.0 ],
+			"rotationOrigin": [ 1.0, 1.0, 2.0 ],
+			"faces": {
+				"north": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"east": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"south": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"west": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
+				"up": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+				"down": { "texture": "#cupronickel1", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+			}
+		}
+	]}
