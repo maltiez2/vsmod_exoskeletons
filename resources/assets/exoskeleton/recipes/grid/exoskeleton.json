@@ -1,0 +1,63 @@
+[
+  {
+		"ingredientPattern": "NLM,DHS,TRP",
+		"recipeGroup": 1,
+		"ingredients": {
+			"N": {"type": "item", "code": "game:metalnailsandstrips-steel", "quantity": 4},
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"G": { "type": "item", "code": "game:jonasframes-gearbox02" },
+			"H": { "type": "item", "code": "game:jonasframes-gearbox01" },
+			"D": { "type": "item", "code": "game:jonasframes-gears01" },
+			"S": { "type": "item", "code": "game:jonasframes-spring01" },
+			"T": { "type": "item", "code": "game:jonasparts-tank01" },
+			"R": { "type": "item", "code": "game:rod-cupronickel" },
+			"P": { "type": "item", "code": "game:metalplate-electrum" },
+			"M": { "type": "block", "code": "game:metal-parts" }
+		},
+		"width": 3,
+		"height": 3,
+		"name": "exoskeleton",
+		"output": { "type": "item", "code": "exoskeleton-arms-unarmored-none-speed"  }
+	},
+	{
+		"ingredientPattern": "NLM,DGS,TRP",
+		"recipeGroup": 1,
+		"ingredients": {
+			"N": {"type": "item", "code": "game:metalnailsandstrips-steel", "quantity": 4},
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"G": { "type": "item", "code": "game:jonasframes-gearbox02" },
+			"H": { "type": "item", "code": "game:jonasframes-gearbox01" },
+			"D": { "type": "item", "code": "game:jonasframes-gears01" },
+			"S": { "type": "item", "code": "game:jonasframes-spring01" },
+			"T": { "type": "item", "code": "game:jonasparts-tank01" },
+			"R": { "type": "item", "code": "game:rod-cupronickel" },
+			"P": { "type": "item", "code": "game:metalplate-electrum" },
+			"M": { "type": "block", "code": "game:metal-parts" }
+		},
+		"width": 3,
+		"height": 3,
+		"name": "exoskeleton",
+		"output": { "type": "item", "code": "exoskeleton-arms-unarmored-none-torque"  }
+	},
+	{
+		"ingredientPattern": "NLM,DJS,TRP",
+		"recipeGroup": 1,
+		"ingredients": {
+			"N": {"type": "item", "code": "game:metalnailsandstrips-steel", "quantity": 4},
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"G": { "type": "item", "code": "game:jonasframes-gearbox02" },
+			"H": { "type": "item", "code": "game:jonasframes-gearbox01" },
+			"D": { "type": "item", "code": "game:jonasframes-gears01" },
+			"J": { "type": "item", "code": "game:jonasframes-joint01" },
+			"S": { "type": "item", "code": "game:jonasframes-spring01" },
+			"T": { "type": "item", "code": "game:jonasparts-tank01" },
+			"R": { "type": "item", "code": "game:rod-cupronickel" },
+			"P": { "type": "item", "code": "game:metalplate-electrum" },
+			"M": { "type": "block", "code": "game:metal-parts" }
+		},
+		"width": 3,
+		"height": 3,
+		"name": "exoskeleton",
+		"output": { "type": "item", "code": "exoskeleton-legs-unarmored-none-speed"  }
+	}
+]

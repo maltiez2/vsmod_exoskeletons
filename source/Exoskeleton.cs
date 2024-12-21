@@ -126,9 +126,9 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
         dsc.AppendLine();
         dsc.AppendLine(Lang.Get("combatoverhaul:armor-layers-info", ArmorType.LayersToTranslatedString()));
         dsc.AppendLine(Lang.Get("combatoverhaul:armor-zones-info", ArmorType.ZonesToTranslatedString()));
-        dsc.AppendLine(Lang.Get("combatoverhaul:armor-fraction-protection"));
         if (Resists.Resists.Values.Any(value => value != 0))
         {
+            dsc.AppendLine(Lang.Get("combatoverhaul:armor-fraction-protection"));
             foreach ((EnumDamageType type, float level) in Resists.Resists.Where(entry => entry.Value > 0))
             {
                 string damageType = Lang.Get($"combatoverhaul:damage-type-{type}");
@@ -173,15 +173,11 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
         ArmorInventory? inventory = GetGearInventory(byEntity) as ArmorInventory;
         if (inventory == null) return;
 
-        ArmorBehavior? behavior = GetCollectibleBehavior<ArmorBehavior>(true);
-        if (behavior == null) return;
-
         string code = slot.Itemstack.Item.Code;
-        ArmorType armorType = behavior.ArmorType;
 
         try
         {
-            IEnumerable<int> slots = inventory.GetSlotBlockingSlotsIndices(armorType);
+            IEnumerable<int> slots = inventory.GetSlotBlockingSlotsIndices(ArmorType);
 
             foreach (int index in slots)
             {
@@ -193,7 +189,7 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
                 inventory[index].MarkDirty();
             }
 
-            int slotIndex = inventory.GetFittingSlotIndex(armorType);
+            int slotIndex = inventory.GetFittingSlotIndex(ArmorType);
             inventory[slotIndex].TryFlipWith(slot);
 
             inventory[slotIndex].MarkDirty();
@@ -203,7 +199,7 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
         }
         catch (Exception exception)
         {
-            api.Logger.Error($"[Exoskeleton] Error on equipping '{code}' that occupies {armorType}:\n{exception}");
+            api.Logger.Error($"[Exoskeleton] Error on equipping '{code}' that occupies {ArmorType}:\n{exception}");
         }
     }
 
