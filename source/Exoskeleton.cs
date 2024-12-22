@@ -76,7 +76,7 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
     {
         double fuelLeft = GetFuelHours(slot);
 
-        return fuelLeft > 0 ? _stats.StatsWhenTurnedOn : _stats.StatsWhenTurnedOff;
+        return (fuelLeft > 0 || !_stats.NeedsFuel) ? _stats.StatsWhenTurnedOn : _stats.StatsWhenTurnedOff;
     }
 
     public override int GetMergableQuantity(ItemStack sinkStack, ItemStack sourceStack, EnumMergePriority priority)
@@ -116,14 +116,18 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
     {
         base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
         
-        double fuelHours = GetFuelHours(inSlot);
-        dsc.AppendLine(Lang.Get("Has fuel for {0:0.#} hours", fuelHours));
-        if (fuelHours <= 0.0)
+        if (_stats.NeedsFuel)
         {
-            dsc.AppendLine(Lang.Get("Add temporal gear to refuel"));
-        }
+            double fuelHours = GetFuelHours(inSlot);
+            dsc.AppendLine(Lang.Get("Has fuel for {0:0.#} hours", fuelHours));
+            if (fuelHours <= 0.0)
+            {
+                dsc.AppendLine(Lang.Get("Add temporal gear to refuel"));
+            }
 
-        dsc.AppendLine();
+            dsc.AppendLine();
+        }
+        
         dsc.AppendLine(Lang.Get("combatoverhaul:armor-layers-info", ArmorType.LayersToTranslatedString()));
         dsc.AppendLine(Lang.Get("combatoverhaul:armor-zones-info", ArmorType.ZonesToTranslatedString()));
         if (Resists.Resists.Values.Any(value => value != 0))
@@ -208,6 +212,6 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
 
     private static InventoryBase? GetGearInventory(Entity entity)
     {
-        return entity.GetBehavior<EntityBehaviorPlayerInventory>().Inventory;
+        return entity.GetBehavior<EntityBehaviorPlayerInventory>()?.Inventory;
     }
 }
