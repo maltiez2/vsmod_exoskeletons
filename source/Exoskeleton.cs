@@ -6,6 +6,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Config;
+using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
 namespace Exoskeleton;
@@ -60,10 +61,11 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
 
         return Math.Max(0.0, slot.Itemstack.Attributes.GetDecimal(_fuelAttribute));
     }
-    public static void SetFuelHours(ItemSlot slot, double fuelHours)
+    public void SetFuelHours(ItemSlot slot, double fuelHours)
     {
         if (slot?.Itemstack?.Attributes == null) return;
 
+        fuelHours = GameMath.Clamp(fuelHours, 0, _stats.FuelCapacityHours);
         slot.Itemstack.Attributes.SetDouble("fuelHours", fuelHours);
         slot.MarkDirty();
     }

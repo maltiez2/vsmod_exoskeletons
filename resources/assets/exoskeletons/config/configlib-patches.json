@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "patches": {
+    "number": {
+      "exoskeletons:itemtypes/exoskeleton-legs.json": {
+        "attributes/StatsWhenTurnedOn/walkspeed": "exo_unarmored_legs_walkspeed",
+        "attributes/StatsWhenTurnedOn/fallDamageThreshold": "exo_unarmored_legs_fallDamageThreshold",
+        "attributes/StatsWhenTurnedOn/jumpHeightMul": "exo_unarmored_legs_jumpHeightMul",
+        "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
+        "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
+      },
+      "exoskeletons:itemtypes/exoskeleton-arms-speed.json": {
+        "attributes/StatsWhenTurnedOn/manipulationSpeed": "exo_unarmored_arms_speed_manipulationSpeed",
+        "attributes/StatsWhenTurnedOn/steadyAim": "exo_unarmored_arms_speed_steadyAim",
+        "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
+        "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
+      },
+      "exoskeletons:itemtypes/exoskeleton-arms-torque.json": {
+        "attributes/StatsWhenTurnedOn/steadyAim": "exo_unarmored_arms_torque_steadyAim",
+        "attributes/StatsWhenTurnedOn/manipulationSpeed": "exo_unarmored_arms_torque_manipulationSpeed",
+        "attributes/StatsWhenTurnedOn/miningSpeedMul": "exo_unarmored_arms_torque_miningSpeedMul",
+        "attributes/StatsWhenTurnedOn/meleeWeaponsDamage": "exo_unarmored_arms_torque_meleeWeaponsDamage",
+        "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
+        "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
+      }
+    },
+    "boolean": {
+      "exoskeletons:itemtypes/exoskeleton-legs.json": {
+        "attributes/NeedsFuel": "exo_unarmored_requres_fuel"
+      },
+      "exoskeletons:itemtypes/exoskeleton-arms-speed.json": {
+        "attributes/NeedsFuel": "exo_unarmored_requres_fuel"
+      },
+      "exoskeletons:itemtypes/exoskeleton-arms-torque.json": {
+        "attributes/NeedsFuel": "exo_unarmored_requres_fuel"
+      }
+    }
+  },
+  "constants": {
+
+  },
+  "settings": [
+    {
+      "code": "exo_unarmored_fuel_capacity",
+      "type": "integer",
+      "ingui": "exoskeletons:setting-exo_unarmored_legs_fuel_capacity",
+      "default": 168,
+      "range": {
+        "min": 12,
+        "max": 720
+      }
+    },
+    {
+      "code": "exo_unarmored_fuel_efficiency",
+      "type": "integer",
+      "ingui": "exoskeletons:setting-exo_unarmored_fuel_efficiency",
+      "default": 7.0,
+      "range": {
+        "min": 1.0,
+        "max": 30.0
+      }
+    },
+    {
+      "code": "exo_unarmored_requres_fuel",
+      "type": "boolean",
+      "ingui": "exoskeletons:setting-exo_unarmored_requres_fuel",
+      "default": true
+    },
+    {
+      "code": "exo_unarmored_legs_walkspeed",
+      "type": "float",
+      "ingui": "exoskeletons:setting-exo_unarmored_legs_walkspeed",
+      "default": 0.5,
+      "range": {
+        "min": -2.0,
+        "max": 2.0
+      }
+    },
+    {
+      "code": "exo_unarmored_legs_fallDamageThreshold",
+      "type": "float",
+      "ingui": "exoskeletons:setting-exo_unarmored_legs_fallDamageThreshold",
+      "default": 1.0,
+      "range": {
+        "min": -5.0,
+        "max": 5.0
+      }
+    },
+    {
+      "code": "exo_unarmored_legs_jumpHeightMul",
+      "type": "float",
+      "ingui": "exoskeletons:setting-exo_unarmored_legs_jumpHeightMul",
+      "default": 1.0,
+      "range": {
+        "min": -5.0,
+        "max": 5.0
+      }
+    },
+    {
+      "code": "exo_unarmored_arms_speed_manipulationSpeed",
+      "type": "float",
+      "ingui": "exoskeletons:setting-exo_unarmored_arms_speed_manipulationSpeed",
+      "default": 0.4,
+      "range": {
+        "min": -2.0,
+        "max": 2.0
+      }
+    },
+    {
+      "code": "exo_unarmored_arms_speed_steadyAim",
+      "type": "float",
+      "ingui": "exoskeletons:setting-exo_unarmored_arms_speed_steadyAim",
+      "default": 0.2,
+      "range": {
+        "min": -2.0,
+        "max": 2.0
+      }
+    },
+    {
+      "code": "exo_unarmored_arms_torque_steadyAim",
+      "type": "float",
+      "ingui": "exoskeletons:setting-exo_unarmored_arms_torque_steadyAim",
+      "default": 0.8,
+      "range": {
+        "min": -2.0,
+        "max": 2.0
+      }
+    },
+    {
+      "code": "exo_unarmored_arms_torque_manipulationSpeed",
+      "type": "float",
+      "ingui": "exoskeletons:setting-exo_unarmored_arms_torque_manipulationSpeed",
+      "default": -0.1,
+      "range": {
+        "min": -2.0,
+        "max": 2.0
+      }
+    },
+    {
+      "code": "exo_unarmored_arms_torque_miningSpeedMul",
+      "type": "float",
+      "ingui": "exoskeletons:setting-exo_unarmored_arms_torque_miningSpeedMul",
+      "default": 0.5,
+      "range": {
+        "min": -2.0,
+        "max": 2.0
+      }
+    },
+    {
+      "code": "exo_unarmored_arms_torque_meleeWeaponsDamage",
+      "type": "float",
+      "ingui": "exoskeletons:setting-exo_unarmored_arms_torque_meleeWeaponsDamage",
+      "default": 0.3,
+      "range": {
+        "min": -2.0,
+        "max": 2.0
+      }
+    }
+  ]
+}

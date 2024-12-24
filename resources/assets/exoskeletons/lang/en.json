@@ -1,0 +1,20 @@
+{
+  "game:tabname-exoskeleton": "Exoskeleton",
+
+  "item-exoskeleton-arms-unarmored-none-speed": "Arms exoskeleton (Speed)",
+  "item-exoskeleton-arms-unarmored-none-torque": "Arms exoskeleton (Torque)",
+  "item-exoskeleton-legs-unarmored-none-speed": "Legs exoskeleton (Speed)",
+
+  "setting-exo_unarmored_legs_fuel_capacity": "Fuel capacity (in-game hours)",
+  "setting-exo_unarmored_fuel_efficiency": "Fuel efficiecny (in-game days per gear)",
+  "setting-exo_unarmored_requres_fuel": "Exoskeletons require fuel to function",
+  "setting-exo_unarmored_legs_walkspeed": "Legs walk speed",
+  "setting-exo_unarmored_legs_fallDamageThreshold": "Legs fall damage threshold",
+  "setting-exo_unarmored_legs_jumpHeightMul": "Legs jump height",
+  "setting-exo_unarmored_arms_speed_manipulationSpeed": "Arms (speed) manipulation speed",
+  "setting-exo_unarmored_arms_speed_steadyAim": "Arms (speed) steady aim",
+  "setting-exo_unarmored_arms_torque_steadyAim": "Arms (torque) steady aim",
+  "setting-exo_unarmored_arms_torque_manipulationSpeed": "Arms (torque) manipulation speed",
+  "setting-exo_unarmored_arms_torque_miningSpeedMul": "Arms (torque) mining speed",
+  "setting-exo_unarmored_arms_torque_meleeWeaponsDamage": "Arms (torque) melee damage"
+}

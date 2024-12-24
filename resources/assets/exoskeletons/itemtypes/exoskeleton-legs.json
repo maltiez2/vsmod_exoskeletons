@@ -1,7 +1,12 @@
 ﻿{
   "code": "exoskeleton",
   "class": "Exoskeleton:Exoskeleton",
-  "variantgroups": [{"code": "bodypart", "states": ["legs"]}, {"code": "construction", "states": ["unarmored"]}, {"code": "material", "states": ["none"]}, {"code": "type", "states": ["speed"]}],
+  "variantgroups": [
+    {"code": "bodypart", "states": ["legs"]},
+    {"code": "construction", "states": ["unarmored"]},
+    {"code": "material", "states": ["none"]},
+    {"code": "type", "states": ["speed"]}
+  ],
   "skipVariants": [],
   "shape": {"base": "{construction}/{bodypart}"},
   "textures": {"seraph": {"base": "game:block/transparent"}},
@@ -10,11 +15,7 @@
     "visibleDamageEffect": true,
     "materialCount": 4,
     "clothesCategory": "armorlegs",
-    "attachableToEntity": {
-      "texturePrefixCode": "exoskeleton-{bodypart}-{construction}-{material}",
-      "disableElements": [],
-      "keepElements": []
-    },
+    "attachableToEntity": {"texturePrefixCode": "exoskeleton-{bodypart}-{construction}-{material}", "disableElements": [], "keepElements": []},
     "footStepSound": null,
     "NeedsFuel": true,
     "FuelCapacityHours": 168,
@@ -24,7 +25,7 @@
     "Zones": ["Legs", "Feet"],
     "Resists": {"PiercingAttack": 0, "SlashingAttack": 0, "BluntAttack": 0},
     "FlatReduction": {"PiercingAttack": 0, "SlashingAttack": 0, "BluntAttack": 0},
-    "StatsWhenTurnedOn": {"walkspeed": 0.5},
+    "StatsWhenTurnedOn": {"walkspeed": 0.5, "fallDamageThreshold": 1, "jumpHeightMul": 1},
     "StatsWhenTurnedOff": {"walkspeed": -0.1}
   },
   "behaviors": [],
@@ -34,10 +35,10 @@
   "heldTpIdleAnimation": "holdunderarm",
   "tpHandTransform": {"translation": {"x": -0.7, "y": -0.6, "z": -0.4}, "rotation": {"x": 95, "y": -20, "z": -91}, "origin": {"x": 0.5, "y": 0.7, "z": 0.5}, "scale": 0.74},
   "guiTransform": {
-		  "translation": { "x": 1, "y": 0, "z": 0 },
-		  "rotation": { "x": -26, "y": 129, "z": -180 },
-		  "origin": { "x": 0.5, "y": 0.55, "z": 0.5 },
-		  "scaleXyz": { "x": -1.16, "y": 1.16, "z": 1.16 }
-	  },
+    "translation": {"x": 1, "y": 0, "z": 0},
+    "rotation": {"x": -26, "y": 129, "z": -180},
+    "origin": {"x": 0.5, "y": 0.55, "z": 0.5},
+    "scaleXyz": {"x": -1.16, "y": 1.16, "z": 1.16}
+  },
   "groundTransform": {"translation": {"x": 0, "y": 0, "z": 0}, "rotation": {"x": 0, "y": 0, "z": 90}, "origin": {"x": 0.34, "y": 1.12, "z": 0.5}, "scale": 3.1}
 }
