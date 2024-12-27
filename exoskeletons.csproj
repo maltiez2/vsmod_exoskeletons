@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ModName>Exoskeleton</ModName>
     <ModType>code</ModType>
-    <ModVersion>0.0.3</ModVersion>
+    <ModVersion>0.0.4</ModVersion>
     <ModId>exoskeletons</ModId>
     <Description></Description>
     <Side>Universal</Side>
@@ -18,6 +18,8 @@
 
   <!-- Dependencies -->
   <ItemGroup>
+    <Dependencies Include="combatoverhaul" Version="*" />
+    <Dependencies Include="armory" Version="*" />
   </ItemGroup>
 
   <!-- Project settings -->

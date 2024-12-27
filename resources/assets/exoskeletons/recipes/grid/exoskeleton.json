@@ -3,7 +3,7 @@
 		"ingredientPattern": "NLM,DHS,TRP",
 		"recipeGroup": 1,
 		"ingredients": {
-			"N": {"type": "item", "code": "game:metalnailsandstrips-steel", "quantity": 4},
+			"N": {"type": "item", "code": "game:metalnailsandstrips-*", "quantity": 4, "name": "material", "allowedVariants": ["iron", "meteoriciron", "steel"]},
 			"L": { "type": "item", "code": "game:leather-normal-plain" },
 			"G": { "type": "item", "code": "game:jonasframes-gearbox02" },
 			"H": { "type": "item", "code": "game:jonasframes-gearbox01" },
@@ -12,7 +12,7 @@
 			"T": { "type": "item", "code": "game:jonasparts-tank01" },
 			"R": { "type": "item", "code": "game:rod-cupronickel" },
 			"P": { "type": "item", "code": "game:metalplate-electrum" },
-			"M": { "type": "block", "code": "game:metal-parts" }
+			"M": { "type": "block", "code": "game:metal-parts", "quantity": 4 }
 		},
 		"width": 3,
 		"height": 3,
@@ -23,7 +23,7 @@
 		"ingredientPattern": "NLM,DGS,TRP",
 		"recipeGroup": 1,
 		"ingredients": {
-			"N": {"type": "item", "code": "game:metalnailsandstrips-steel", "quantity": 4},
+			"N": {"type": "item", "code": "game:metalnailsandstrips-*", "quantity": 4, "name": "material", "allowedVariants": ["iron", "meteoriciron", "steel"]},
 			"L": { "type": "item", "code": "game:leather-normal-plain" },
 			"G": { "type": "item", "code": "game:jonasframes-gearbox02" },
 			"H": { "type": "item", "code": "game:jonasframes-gearbox01" },
@@ -32,7 +32,7 @@
 			"T": { "type": "item", "code": "game:jonasparts-tank01" },
 			"R": { "type": "item", "code": "game:rod-cupronickel" },
 			"P": { "type": "item", "code": "game:metalplate-electrum" },
-			"M": { "type": "block", "code": "game:metal-parts" }
+			"M": { "type": "block", "code": "game:metal-parts", "quantity": 4 }
 		},
 		"width": 3,
 		"height": 3,
@@ -43,7 +43,7 @@
 		"ingredientPattern": "NLM,DJS,TRP",
 		"recipeGroup": 1,
 		"ingredients": {
-			"N": {"type": "item", "code": "game:metalnailsandstrips-steel", "quantity": 4},
+			"N": {"type": "item", "code": "game:metalnailsandstrips-*", "quantity": 4, "name": "material", "allowedVariants": ["iron", "meteoriciron", "steel"]},
 			"L": { "type": "item", "code": "game:leather-normal-plain" },
 			"G": { "type": "item", "code": "game:jonasframes-gearbox02" },
 			"H": { "type": "item", "code": "game:jonasframes-gearbox01" },
@@ -53,11 +53,50 @@
 			"T": { "type": "item", "code": "game:jonasparts-tank01" },
 			"R": { "type": "item", "code": "game:rod-cupronickel" },
 			"P": { "type": "item", "code": "game:metalplate-electrum" },
-			"M": { "type": "block", "code": "game:metal-parts" }
+			"M": { "type": "block", "code": "game:metal-parts", "quantity": 4 }
 		},
 		"width": 3,
 		"height": 3,
 		"name": "exoskeleton",
 		"output": { "type": "item", "code": "exoskeleton-legs-unarmored-none-speed"  }
+	},
+	{
+		"ingredientPattern": "ABC",
+		"recipeGroup": 1,
+		"ingredients": {
+			"A": {"type": "item", "code": "exoskeleton-arms-unarmored-none-speed"},
+			"B": { "type": "item", "code": "armory:armor-arms-plate-*-vanilla", "name": "material", "allowedVariants": ["iron", "meteoriciron", "steel"] },
+			"C": { "type": "item", "code": "armory:armor-hands-plate-*-vanilla", "name": "material", "allowedVariants": ["iron", "meteoriciron", "steel"] }
+		},
+		"width": 3,
+		"height": 1,
+		"name": "exoskeleton",
+		"output": { "type": "item", "code": "exoskeleton-arms-armored-{material}-speed"  }
+	},
+	{
+		"ingredientPattern": "ABC",
+		"recipeGroup": 1,
+		"ingredients": {
+			"A": {"type": "item", "code": "exoskeleton-arms-unarmored-none-torque"},
+			"B": { "type": "item", "code": "armory:armor-arms-plate-*-vanilla", "name": "material", "allowedVariants": ["iron", "meteoriciron", "steel"] },
+			"C": { "type": "item", "code": "armory:armor-hands-plate-*-vanilla", "name": "material", "allowedVariants": ["iron", "meteoriciron", "steel"] }
+		},
+		"width": 3,
+		"height": 1,
+		"name": "exoskeleton",
+		"output": { "type": "item", "code": "exoskeleton-arms-armored-{material}-torque"  }
+	},
+	{
+		"ingredientPattern": "ABC",
+		"recipeGroup": 1,
+		"ingredients": {
+			"A": {"type": "item", "code": "exoskeleton-legs-unarmored-none-speed"},
+			"B": { "type": "item", "code": "armory:armor-legs-plate-*-vanilla", "name": "material", "allowedVariants": ["iron", "meteoriciron", "steel"] },
+			"C": { "type": "item", "code": "armory:armor-feet-plate-*-vanilla", "name": "material", "allowedVariants": ["iron", "meteoriciron", "steel"] }
+		},
+		"width": 3,
+		"height": 1,
+		"name": "exoskeleton",
+		"output": { "type": "item", "code": "exoskeleton-legs-armored-{material}-speed"  }
 	}
 ]

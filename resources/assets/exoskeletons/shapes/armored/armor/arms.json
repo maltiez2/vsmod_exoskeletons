@@ -1,0 +1,84 @@
+{
+	"editor": {
+		"backDropShape": "E:/Programs/VSModelCreator/seraph-faceless",
+		"collapsedPaths": "Root/ArmorLowerArmL,Root/ArmorUpperArmR,Root/ArmorLowerArmR,Root/ArmorUpperArmL",
+		"allAngles": true,
+		"entityTextureMode": true
+	},
+	"textureWidth": 64,
+	"textureHeight": 64,
+	"textureSizes": {
+	},
+	"textures": {
+		"material": "entity/humanoid/serapharmor/plate/steel"
+	},
+	"elements": [
+		{
+			"name": "ArmorUpperArmR",
+			"stepParentName": "UpperArmR",
+			"from": [ -0.2, -0.2, -0.3 ],
+			"to": [ 3.1, 7.2, 2.1 ],
+			"uv": [ 54.0, 0.0 ],
+			"rotationOrigin": [ -0.2, -0.2, -0.3 ],
+			"faces": {
+				"north": { "texture": "#material", "uv": [ 54.0, 2.0, 57.0, 9.0 ] },
+				"east": { "texture": "#material", "uv": [ 57.0, 2.0, 59.0, 9.0 ] },
+				"south": { "texture": "#material", "uv": [ 59.0, 2.0, 62.0, 9.0 ] },
+				"west": { "texture": "#material", "uv": [ 62.0, 2.0, 64.0, 9.0 ] },
+				"up": { "texture": "#material", "uv": [ 54.0, 0.0, 57.0, 2.0 ] },
+				"down": { "texture": "#material", "uv": [ 57.0, 0.0, 60.0, 2.0 ] }
+			},
+			"children": [
+				{
+					"name": "ArmorPauldronR",
+					"from": [ -0.3, 4.0, -0.5 ],
+					"to": [ 3.5, 8.0, 1.5 ],
+					"unwrapMode": 1,
+					"uv": [ 22.0, 12.0 ],
+					"rotationOrigin": [ -0.3, 4.0, -0.5 ],
+					"faces": {
+						"north": { "texture": "#material", "uv": [ 24.0, 14.0, 27.5, 18.0 ] },
+						"east": { "texture": "#material", "uv": [ 22.0, 14.0, 24.0, 18.0 ] },
+						"south": { "texture": "#material", "uv": [ 29.5, 14.0, 33.0, 18.0 ] },
+						"west": { "texture": "#material", "uv": [ 27.5, 14.0, 29.5, 18.0 ] },
+						"up": { "texture": "#material", "uv": [ 24.0, 12.0, 27.5, 14.0 ], "rotation": 180 },
+						"down": { "texture": "#material", "uv": [ 24.0, 18.0, 27.5, 20.0 ] }
+					}
+				}
+			]
+		},
+		{
+			"name": "ArmorUpperArmL",
+			"stepParentName": "UpperArmL",
+			"from": [ -0.2, -0.2, -0.1 ],
+			"to": [ 3.1, 7.2, 2.3 ],
+			"uv": [ 44.0, 0.0 ],
+			"rotationOrigin": [ -0.2, -0.2, -0.1 ],
+			"faces": {
+				"north": { "texture": "#material", "uv": [ 44.0, 2.0, 47.0, 9.0 ] },
+				"east": { "texture": "#material", "uv": [ 47.0, 2.0, 49.0, 9.0 ] },
+				"south": { "texture": "#material", "uv": [ 49.0, 2.0, 52.0, 9.0 ] },
+				"west": { "texture": "#material", "uv": [ 52.0, 2.0, 54.0, 9.0 ] },
+				"up": { "texture": "#material", "uv": [ 44.0, 0.0, 47.0, 2.0 ] },
+				"down": { "texture": "#material", "uv": [ 47.0, 0.0, 50.0, 2.0 ] }
+			},
+			"children": [
+				{
+					"name": "ArmorPauldronL",
+					"from": [ -0.3, 4.0, 0.8 ],
+					"to": [ 3.5, 8.0, 2.8 ],
+					"unwrapMode": 3,
+					"uv": [ 11.0, 12.0 ],
+					"rotationOrigin": [ -0.3, 4.0, -0.5 ],
+					"faces": {
+						"north": { "texture": "#material", "uv": [ 18.5, 14.0, 22.0, 18.0 ] },
+						"east": { "texture": "#material", "uv": [ 16.5, 14.0, 18.5, 18.0 ] },
+						"south": { "texture": "#material", "uv": [ 13.0, 14.0, 16.5, 18.0 ] },
+						"west": { "texture": "#material", "uv": [ 11.0, 14.0, 13.0, 18.0 ] },
+						"up": { "texture": "#material", "uv": [ 13.0, 12.0, 16.5, 14.0 ] },
+						"down": { "texture": "#material", "uv": [ 13.0, 18.0, 16.5, 20.0 ], "rotation": 180 }
+					}
+				}
+			]
+		}
+	]}

@@ -1,0 +1,158 @@
+[
+  {
+    "ingredientPattern": "APM",
+    "recipeGroup": 2,
+    "ingredients": {
+      "A": {
+        "type": "item",
+        "code": "exoskeleton-arms-armored-*-speed",
+        "name": "material",
+        "allowedVariants": ["iron", "meteoriciron", "steel"]
+      },
+      "P": {
+        "type": "item",
+        "code": "game:metalplate-*",
+        "name": "material",
+        "allowedVariants": ["iron", "meteoriciron", "steel"]
+      },
+      "M": {
+        "type": "block",
+        "code": "game:metal-parts"
+      }
+    },
+    "width": 3,
+    "height": 1,
+    "shapeless": true,
+    "copyAttributesFrom": "A",
+    "averageDurability": false,
+    "name": "plate armor repair",
+    "output": {"type": "item", "code": "exoskeleton-arms-armored-{material}-speed"}
+  },
+  {
+    "ingredientPattern": "APM",
+    "recipeGroup": 2,
+    "ingredients": {
+      "A": {
+        "type": "item",
+        "code": "exoskeleton-arms-armored-*-torque",
+        "name": "material",
+        "allowedVariants": ["iron", "meteoriciron", "steel"]
+      },
+      "P": {
+        "type": "item",
+        "code": "game:metalplate-*",
+        "name": "material",
+        "allowedVariants": ["iron", "meteoriciron", "steel"]
+      },
+      "M": {
+        "type": "block",
+        "code": "game:metal-parts"
+      }
+    },
+    "width": 3,
+    "height": 1,
+    "shapeless": true,
+    "copyAttributesFrom": "A",
+    "averageDurability": false,
+    "name": "plate armor repair",
+    "output": {"type": "item", "code": "exoskeleton-arms-armored-{material}-torque"}
+  },
+  {
+    "ingredientPattern": "APM",
+    "recipeGroup": 2,
+    "ingredients": {
+      "A": {
+        "type": "item",
+        "code": "exoskeleton-legs-armored-*-speed",
+        "name": "material",
+        "allowedVariants": ["iron", "meteoriciron", "steel"]
+      },
+      "P": {
+        "type": "item",
+        "code": "game:metalplate-*",
+        "name": "material",
+        "allowedVariants": ["iron", "meteoriciron", "steel"]
+      },
+      "M": {
+        "type": "block",
+        "code": "game:metal-parts"
+      }
+    },
+    "width": 3,
+    "height": 1,
+    "shapeless": true,
+    "copyAttributesFrom": "A",
+    "averageDurability": false,
+    "name": "plate armor repair",
+    "output": {"type": "item", "code": "exoskeleton-legs-armored-{material}-speed"}
+  },
+  {
+    "ingredientPattern": "AM",
+    "recipeGroup": 2,
+    "ingredients": {
+      "A": {
+        "type": "item",
+        "code": "exoskeleton-arms-unarmored-none-speed",
+        "name": "material",
+        "allowedVariants": ["iron", "meteoriciron", "steel"]
+      },
+      "M": {
+        "type": "block",
+        "code": "game:metal-parts"
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "shapeless": true,
+    "copyAttributesFrom": "A",
+    "averageDurability": false,
+    "name": "exoskeleton repair",
+    "output": {"type": "item", "code": "exoskeleton-arms-unarmored-none-speed"}
+  },
+  {
+    "ingredientPattern": "AM",
+    "recipeGroup": 2,
+    "ingredients": {
+      "A": {
+        "type": "item",
+        "code": "exoskeleton-arms-unarmored-none-torque",
+        "name": "material",
+        "allowedVariants": ["iron", "meteoriciron", "steel"]
+      },
+      "M": {
+        "type": "block",
+        "code": "game:metal-parts"
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "shapeless": true,
+    "copyAttributesFrom": "A",
+    "averageDurability": false,
+    "name": "exoskeleton repair",
+    "output": {"type": "item", "code": "exoskeleton-arms-unarmored-none-torque"}
+  },
+  {
+    "ingredientPattern": "AM",
+    "recipeGroup": 2,
+    "ingredients": {
+      "A": {
+        "type": "item",
+        "code": "exoskeleton-legs-unarmored-none-speed",
+        "name": "material",
+        "allowedVariants": ["iron", "meteoriciron", "steel"]
+      },
+      "M": {
+        "type": "block",
+        "code": "game:metal-parts"
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "shapeless": true,
+    "copyAttributesFrom": "A",
+    "averageDurability": false,
+    "name": "exoskeleton repair",
+    "output": {"type": "item", "code": "exoskeleton-legs-unarmored-none-speed"}
+  }
+]
