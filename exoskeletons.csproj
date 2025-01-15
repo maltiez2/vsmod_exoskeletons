@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ModName>Exoskeleton</ModName>
     <ModType>code</ModType>
-    <ModVersion>0.0.4</ModVersion>
+    <ModVersion>0.0.6</ModVersion>
     <ModId>exoskeletons</ModId>
     <Description></Description>
     <Side>Universal</Side>
@@ -14,6 +14,12 @@
   <!-- Authors -->
   <ItemGroup>
     <ModInfoAuthors Include="Maltiez" />
+  </ItemGroup>
+
+  <!-- Translators -->
+  <ItemGroup>
+    <ModInfoTranslators Include="Nikolashka - Russian" />
+    <ModInfoTranslators Include="Ouk - Czech" />
   </ItemGroup>
 
   <!-- Dependencies -->
@@ -92,6 +98,7 @@
 
   "description": "$(Description)",
   "authors": [ @(ModInfoAuthors->'"%(Identity)"', ', ') ],
+  "translation": [ @(ModInfoTranslators->'"%(Identity)"', ', ') ],
 
   "dependencies": {
     @(Dependencies->'"%(Identity)": "%(Version)"', ', ')
