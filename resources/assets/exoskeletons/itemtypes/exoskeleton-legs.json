@@ -21,6 +21,7 @@
     "FuelCapacityHours": 168,
     "FuelEfficiency": 7,
     "FuelAttribute": "nightVisionFuelHours",
+    "ConsumeFuelWhileSleeping": false,
     "Layers": ["Outer"],
     "Zones": ["Legs", "Feet"],
     "Resists": {"PiercingAttack": 0, "SlashingAttack": 0, "BluntAttack": 0},

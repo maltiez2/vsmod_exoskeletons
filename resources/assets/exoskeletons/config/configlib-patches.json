@@ -47,22 +47,28 @@
     },
     "boolean": {
       "exoskeletons:itemtypes/exoskeleton-legs.json": {
-        "attributes/NeedsFuel": "exo_unarmored_requres_fuel"
+        "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
+        "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
       },
       "exoskeletons:itemtypes/exoskeleton-arms-speed.json": {
-        "attributes/NeedsFuel": "exo_unarmored_requres_fuel"
+        "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
+        "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
       },
       "exoskeletons:itemtypes/exoskeleton-arms-torque.json": {
-        "attributes/NeedsFuel": "exo_unarmored_requres_fuel"
+        "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
+        "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
       },
       "exoskeletons:itemtypes/exoskeleton-armored-legs.json": {
-        "attributes/NeedsFuel": "exo_unarmored_requres_fuel"
+        "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
+        "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
       },
       "exoskeletons:itemtypes/exoskeleton-arms-armored-speed.json": {
-        "attributes/NeedsFuel": "exo_unarmored_requres_fuel"
+        "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
+        "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
       },
       "exoskeletons:itemtypes/exoskeleton-arms-armored-torque.json": {
-        "attributes/NeedsFuel": "exo_unarmored_requres_fuel"
+        "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
+        "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
       }
     }
   },
@@ -95,6 +101,12 @@
       "type": "boolean",
       "ingui": "exoskeletons:setting-exo_unarmored_requres_fuel",
       "default": true
+    },
+    {
+      "code": "exo_consume_fuel_while_sleeping",
+      "type": "boolean",
+      "ingui": "exoskeletons:setting-exo_consume_fuel_while_sleeping",
+      "default": false
     },
     {
       "code": "exo_unarmored_legs_walkspeed",

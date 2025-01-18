@@ -17,6 +17,7 @@ public class ExoskeletonStats
     public float FuelCapacityHours { get; set; } = 24f;
     public float FuelEfficiency { get; set; } = 1f;
     public string FuelAttribute { get; set; } = "nightVisionFuelHours";
+    public bool ConsumeFuelWhileSleeping { get; set; } = false;
 
     public string[] Layers { get; set; } = Array.Empty<string>();
     public string[] Zones { get; set; } = Array.Empty<string>();
@@ -48,20 +49,21 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
             _stats.FlatReduction.ToDictionary(entry => Enum.Parse<EnumDamageType>(entry.Key), entry => entry.Value));
     }
 
-    public void AddFuelHours(ItemSlot slot, double hours)
+    public void AddFuelHours(IPlayer player, ItemSlot slot, double hours)
     {
         if (slot?.Itemstack?.Attributes == null) return;
 
-        slot.Itemstack.Attributes.SetDouble("fuelHours", Math.Max(0.0, hours + GetFuelHours(slot)));
+        slot.Itemstack.Attributes.SetDouble("fuelHours", Math.Max(0.0, hours + GetFuelHours(player, slot)));
         slot.OnItemSlotModified(sinkStack: null);
     }
-    public double GetFuelHours(ItemSlot slot)
+    public double GetFuelHours(IPlayer player, ItemSlot slot)
     {
         if (slot?.Itemstack?.Attributes == null) return 0;
 
         return Math.Max(0.0, slot.Itemstack.Attributes.GetDecimal(_fuelAttribute));
     }
-    public void SetFuelHours(ItemSlot slot, double fuelHours)
+    public bool ConsumeFuelWhenSleeping(IPlayer player, ItemSlot slot) => _stats.ConsumeFuelWhileSleeping;
+    public void SetFuelHours(IPlayer player, ItemSlot slot, double fuelHours)
     {
         if (slot?.Itemstack?.Attributes == null) return;
 
@@ -76,7 +78,7 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
 
     public Dictionary<string, float> PlayerStats(ItemSlot slot, EntityPlayer player)
     {
-        double fuelLeft = GetFuelHours(slot);
+        double fuelLeft = GetFuelHours(player.Player, slot);
 
         return (fuelLeft > 0 || !_stats.NeedsFuel) ? _stats.StatsWhenTurnedOn : _stats.StatsWhenTurnedOff;
     }
@@ -100,10 +102,10 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
         if (op.CurrentPriority == EnumMergePriority.DirectMerge)
         {
             float stackFuel = GetStackFuel(op.SourceSlot.Itemstack);
-            double fuelHours = GetFuelHours(op.SinkSlot);
+            double fuelHours = GetFuelHours(op.ActingPlayer, op.SinkSlot);
             if (stackFuel > 0f && fuelHours + (double)(stackFuel / 2f) < (double)_stats.FuelCapacityHours)
             {
-                SetFuelHours(op.SinkSlot, (double)stackFuel + fuelHours);
+                SetFuelHours(op.ActingPlayer, op.SinkSlot, (double)stackFuel + fuelHours);
                 op.MovedQuantity = 1;
                 op.SourceSlot.TakeOut(1);
                 op.SinkSlot.MarkDirty();
@@ -120,7 +122,7 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
         
         if (_stats.NeedsFuel)
         {
-            double fuelHours = GetFuelHours(inSlot);
+            double fuelHours = GetFuelHours((world as IClientWorldAccessor)?.Player, inSlot);
             dsc.AppendLine(Lang.Get("Has fuel for {0:0.#} hours", fuelHours));
             if (fuelHours <= 0.0)
             {

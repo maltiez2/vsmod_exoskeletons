@@ -21,6 +21,7 @@
     "FuelCapacityHours": 168,
     "FuelEfficiency": 7,
     "FuelAttribute": "nightVisionFuelHours",
+    "ConsumeFuelWhileSleeping": false,
     "Layers": ["Outer"],
     "Zones": ["Arms", "Hands"],
     "ResistsByType": {"*-*iron-*": {"PiercingAttack": 10, "SlashingAttack": 10, "BluntAttack": 3}, "*-steel-*": {"PiercingAttack": 12, "SlashingAttack": 12, "BluntAttack": 4}},
