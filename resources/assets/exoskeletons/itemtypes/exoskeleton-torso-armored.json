@@ -1,11 +1,11 @@
 ﻿{
   "code": "exoskeleton",
-  "class": "Exoskeleton:Exoskeleton",
+  "class": "Exoskeleton:LightSourceExoskeleton",
   "variantgroups": [
-    {"code": "bodypart", "states": ["arms"]},
+    {"code": "bodypart", "states": ["torso"]},
     {"code": "construction", "states": ["armored"]},
     {"code": "material", "states": ["iron", "meteoriciron", "steel"]},
-    {"code": "type", "states": ["torque"]}
+    {"code": "type", "states": ["container"]}
   ],
   "skipVariants": [],
   "shape": {"base": "{construction}/{bodypart}"},
@@ -23,18 +23,20 @@
     "FuelAttribute": "nightVisionFuelHours",
     "ConsumeFuelWhileSleeping": false,
     "Layers": ["Outer"],
-    "Zones": ["Arms", "Hands"],
+    "Zones": ["Torso"],
     "ResistsByType": {"*-*iron-*": {"PiercingAttack": 10, "SlashingAttack": 10, "BluntAttack": 4}, "*-steel-*": {"PiercingAttack": 12, "SlashingAttack": 12, "BluntAttack": 5}},
     "FlatReductionByType": {"*-*iron-*": {"PiercingAttack": 1, "SlashingAttack": 0, "BluntAttack": 0}, "*-steel-*": {"PiercingAttack": 1, "SlashingAttack": 1, "BluntAttack": 0}},
-    "StatsWhenTurnedOn": {"manipulationSpeed": -0.15, "steadyAim": 0.6, "miningSpeedMul": 0.3, "meleeWeaponsDamage": 0.2},
-    "StatsWhenTurnedOff": {"manipulationSpeed": -0.15, "steadyAim": -0.15, "miningSpeedMul": -0.15, "meleeWeaponsDamage": 0}
+    "StatsWhenTurnedOn": {"walkspeed": -0.05, "manipulationSpeed": 0, "steadyAim": 0, "healingeffectivness": -0.03, "hungerrate": 0.02},
+    "StatsWhenTurnedOff": {"walkspeed": -0.05, "manipulationSpeed": 0, "steadyAim": 0, "healingeffectivness": -0.03, "hungerrate": 0.02},
+    "LightHsv": [10, 5, 15],
+    "TurnedOffLightHsv": [10, 5, 3]
   },
-  "behaviors": [],
+  "behaviors": [{"name": "CombatOverhaul:GearEquipableBag", "properties": {"canHoldWildcards": ["gear-temporal"], "color": "#84b054", "slotsNumber": 3}}],
   "durability": 11000,
   "creativeinventory": {"exoskeleton": ["*"]},
   "renderAlphaTest": 0.25,
   "heldTpIdleAnimation": "holdunderarm",
   "tpHandTransforme": {"translation": {"x": -0.7, "y": -0.6, "z": -0.4}, "rotation": {"x": 95, "y": -20, "z": -91}, "origin": {"x": 0.5, "y": 0.7, "z": 0.5}, "scale": 0.74},
-  "guiTransform": {"translation": {"x": 1, "y": 0, "z": 0}, "rotation": {"x": -26, "y": 49, "z": -180}, "origin": {"x": 0.5, "y": 1.15, "z": 0.5}, "scale": 1.46},
+  "guiTransform": {"translation": {"x": 1, "y": 0, "z": 0}, "rotation": {"x": -26, "y": -58, "z": -180}, "origin": {"x": 0.5, "y": 1.15, "z": 0.5}, "scale": 1.46},
   "groundTransform": {"translation": {"x": 0, "y": 0, "z": 0}, "rotation": {"x": 0, "y": 0, "z": 90}, "origin": {"x": 0.34, "y": 1.12, "z": 0.5}, "scale": 3.1}
 }

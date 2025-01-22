@@ -1,4 +1,5 @@
-﻿using CombatOverhaul;
+﻿using Cairo;
+using CombatOverhaul;
 using CombatOverhaul.Armor;
 using CombatOverhaul.DamageSystems;
 using System.Text;
@@ -7,6 +8,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
 namespace Exoskeleton;
@@ -18,6 +20,7 @@ public class ExoskeletonStats
     public float FuelEfficiency { get; set; } = 1f;
     public string FuelAttribute { get; set; } = "nightVisionFuelHours";
     public bool ConsumeFuelWhileSleeping { get; set; } = false;
+    public string[] RefuelBagWildcard { get; set; } = new string[] { "exoskeleton*" };
 
     public string[] Layers { get; set; } = Array.Empty<string>();
     public string[] Zones { get; set; } = Array.Empty<string>();
@@ -54,6 +57,12 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
         if (slot?.Itemstack?.Attributes == null) return;
 
         slot.Itemstack.Attributes.SetDouble("fuelHours", Math.Max(0.0, hours + GetFuelHours(player, slot)));
+        
+        if (GetFuelHours(player, slot) <= 0.0)
+        {
+            RefuelFromBag(player, slot);
+        }
+        
         slot.OnItemSlotModified(sinkStack: null);
     }
     public double GetFuelHours(IPlayer player, ItemSlot slot)
@@ -74,6 +83,39 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
     public float GetStackFuel(ItemStack stack)
     {
         return (stack.ItemAttributes?[_stats.FuelAttribute].AsFloat() ?? 0f) * _stats.FuelEfficiency;
+    }
+    public void RefuelFromBag(IPlayer player, ItemSlot slot)
+    {
+        player.Entity.WalkInventory(fuelSlot =>
+        {
+            if (fuelSlot is ItemSlotBagContentWithWildcardMatch wildcardMatchSlot &&
+                WildcardUtil.Match(_stats.RefuelBagWildcard, wildcardMatchSlot.SourceBag.Collectible.Code.Path) &&
+                fuelSlot?.Empty == false &&
+                GetStackFuel(fuelSlot.Itemstack) > 0)
+            {
+                if (AddFuelFromStack(player, slot, fuelSlot.Itemstack))
+                {
+                    fuelSlot.TakeOut(1);
+                    fuelSlot.MarkDirty();
+                    slot.MarkDirty();
+
+                    return false;
+                }
+            }
+
+            return true;
+        });
+    }
+    public bool AddFuelFromStack(IPlayer player, ItemSlot slot, ItemStack stack)
+    {
+        float stackFuel = GetStackFuel(stack);
+        double fuelHours = GetFuelHours(player, slot);
+        if (stackFuel > 0f && fuelHours + (double)(stackFuel / 2f) < (double)_stats.FuelCapacityHours)
+        {
+            SetFuelHours(player, slot, (double)stackFuel + fuelHours);
+            return true;
+        }
+        return false;
     }
 
     public Dictionary<string, float> PlayerStats(ItemSlot slot, EntityPlayer player)
@@ -218,4 +260,88 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
     {
         return entity.GetBehavior<EntityBehaviorPlayerInventory>()?.Inventory;
     }
+}
+
+public class ChestExoskeletonStats
+{
+    public string[] Layers { get; set; } = Array.Empty<string>();
+    public string[] Zones { get; set; } = Array.Empty<string>();
+    public Dictionary<string, float> Resists { get; set; } = new();
+    public Dictionary<string, float> FlatReduction { get; set; } = new();
+    public Dictionary<string, float> StatsWhenTurnedOn { get; set; } = new();
+    public Dictionary<string, float> StatsWhenTurnedOff { get; set; } = new();
+}
+
+public class LightSourceExoskeleton : WearableFueledLightSource, IAffectsPlayerStats, IArmor
+{
+    public ArmorType ArmorType { get; private set; }
+    public DamageResistData Resists { get; private set; } = new();
+
+    public override void OnLoaded(ICoreAPI api)
+    {
+        base.OnLoaded(api);
+
+        _stats = Attributes.AsObject<ChestExoskeletonStats>();
+        
+        if (!_stats.Layers.Any() || !_stats.Zones.Any())
+        {
+            return;
+        }
+        ArmorType = new(_stats.Layers.Select(Enum.Parse<ArmorLayers>).Aggregate((first, second) => first | second), _stats.Zones.Select(Enum.Parse<DamageZone>).Aggregate((first, second) => first | second));
+        Resists = new(
+            _stats.Resists.ToDictionary(entry => Enum.Parse<EnumDamageType>(entry.Key), entry => entry.Value),
+            _stats.FlatReduction.ToDictionary(entry => Enum.Parse<EnumDamageType>(entry.Key), entry => entry.Value));
+    }
+    
+    public Dictionary<string, float> PlayerStats(ItemSlot slot, EntityPlayer player)
+    {
+        if (TurnedOn(player.Player, slot))
+        {
+            return _stats.StatsWhenTurnedOn;
+        }
+        else
+        {
+            return _stats.StatsWhenTurnedOff;
+        }
+    }
+
+    public override void GetHeldItemInfo(ItemSlot inSlot, StringBuilder dsc, IWorldAccessor world, bool withDebugInfo)
+    {
+        base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
+
+        dsc.AppendLine(Lang.Get("combatoverhaul:armor-layers-info", ArmorType.LayersToTranslatedString()));
+        dsc.AppendLine(Lang.Get("combatoverhaul:armor-zones-info", ArmorType.ZonesToTranslatedString()));
+        if (Resists.Resists.Values.Any(value => value != 0))
+        {
+            dsc.AppendLine(Lang.Get("combatoverhaul:armor-fraction-protection"));
+            foreach ((EnumDamageType type, float level) in Resists.Resists.Where(entry => entry.Value > 0))
+            {
+                string damageType = Lang.Get($"combatoverhaul:damage-type-{type}");
+                dsc.AppendLine($"  {damageType}: {level}");
+            }
+        }
+
+        if (Resists.FlatDamageReduction.Values.Any(value => value != 0))
+        {
+            dsc.AppendLine(Lang.Get("combatoverhaul:armor-flat-protection"));
+            foreach ((EnumDamageType type, float level) in Resists.FlatDamageReduction.Where(entry => entry.Value > 0))
+            {
+                string damageType = Lang.Get($"combatoverhaul:damage-type-{type}");
+                dsc.AppendLine($"  {damageType}: {level}");
+            }
+        }
+
+        if (_stats.StatsWhenTurnedOn.Values.Any(value => value != 0))
+        {
+            dsc.AppendLine(Lang.Get("combatoverhaul:stat-stats"));
+            foreach ((string stat, float value) in _stats.StatsWhenTurnedOn)
+            {
+                if (value != 0f) dsc.AppendLine($"  {Lang.Get($"combatoverhaul:stat-{stat}")}: {value * 100:F1}%");
+            }
+        }
+
+        dsc.AppendLine();
+    }
+
+    private ChestExoskeletonStats _stats = new();
 }

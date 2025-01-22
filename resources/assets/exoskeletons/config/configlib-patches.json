@@ -23,6 +23,10 @@
         "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
         "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
       },
+      "exoskeletons:itemtypes/exoskeleton-torso.json": {
+        "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
+        "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
+      },
       "exoskeletons:itemtypes/exoskeleton-armored-legs.json": {
         "attributes/StatsWhenTurnedOn/walkspeed": "exo_armored_legs_walkspeed",
         "attributes/StatsWhenTurnedOn/fallDamageThreshold": "exo_armored_legs_fallDamageThreshold",
@@ -41,6 +45,10 @@
         "attributes/StatsWhenTurnedOn/manipulationSpeed": "exo_armored_arms_torque_manipulationSpeed",
         "attributes/StatsWhenTurnedOn/miningSpeedMul": "exo_armored_arms_torque_miningSpeedMul",
         "attributes/StatsWhenTurnedOn/meleeWeaponsDamage": "exo_armored_arms_torque_meleeWeaponsDamage",
+        "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
+        "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
+      },
+      "exoskeletons:itemtypes/exoskeleton-torso-armored.json": {
         "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
         "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
       }
@@ -67,6 +75,14 @@
         "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
       },
       "exoskeletons:itemtypes/exoskeleton-arms-armored-torque.json": {
+        "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
+        "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
+      },
+      "exoskeletons:itemtypes/exoskeleton-torso.json": {
+        "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
+        "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
+      },
+      "exoskeletons:itemtypes/exoskeleton-torso-armored": {
         "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
         "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
       }

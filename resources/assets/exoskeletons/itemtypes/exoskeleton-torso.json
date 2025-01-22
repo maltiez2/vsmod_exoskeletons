@@ -1,0 +1,42 @@
+﻿{
+  "code": "exoskeleton",
+  "class": "Exoskeleton:LightSourceExoskeleton",
+  "variantgroups": [
+    {"code": "bodypart", "states": ["torso"]},
+    {"code": "construction", "states": ["unarmored"]},
+    {"code": "material", "states": ["none"]},
+    {"code": "type", "states": ["container"]}
+  ],
+  "skipVariants": [],
+  "shape": {"base": "{construction}/{bodypart}"},
+  "textures": {"seraph": {"base": "game:block/transparent"}},
+  "storageFlags": 128,
+  "attributes": {
+    "visibleDamageEffect": true,
+    "materialCount": 4,
+    "clothesCategory": "armorbody",
+    "attachableToEntity": {"texturePrefixCode": "exoskeleton-{bodypart}-{construction}-{material}-{type}", "disableElements": [], "keepElements": []},
+    "footStepSound": null,
+    "NeedsFuel": true,
+    "FuelCapacityHours": 168,
+    "FuelEfficiency": 7,
+    "FuelAttribute": "nightVisionFuelHours",
+    "ConsumeFuelWhileSleeping": false,
+    "Layers": ["Outer"],
+    "Zones": ["Torso"],
+    "Resists": {"PiercingAttack": 0, "SlashingAttack": 0, "BluntAttack": 0},
+    "FlatReduction": {"PiercingAttack": 0, "SlashingAttack": 0, "BluntAttack": 0},
+    "StatsWhenTurnedOn": {"manipulationSpeed": 0, "steadyAim": 0, "miningSpeedMul": 0, "meleeWeaponsDamage": 0},
+    "StatsWhenTurnedOff": {"manipulationSpeed": 0, "steadyAim": 0, "miningSpeedMul": 0, "meleeWeaponsDamage": 0},
+    "LightHsv": [10, 5, 15],
+    "TurnedOffLightHsv": [10, 5, 3]
+  },
+  "behaviors": [{"name": "CombatOverhaul:GearEquipableBag", "properties": {"canHoldWildcards": ["gear-temporal"], "color": "#84b054", "slotsNumber": 3}}],
+  "durability": 11000,
+  "creativeinventory": {"exoskeleton": ["*"]},
+  "renderAlphaTest": 0.25,
+  "heldTpIdleAnimation": "holdunderarm",
+  "tpHandTransforme": {"translation": {"x": -0.7, "y": -0.6, "z": -0.4}, "rotation": {"x": 95, "y": -20, "z": -91}, "origin": {"x": 0.5, "y": 0.7, "z": 0.5}, "scale": 0.74},
+  "guiTransform": {"translation": {"x": 1, "y": 0, "z": 0}, "rotation": {"x": -11, "y": -83, "z": -180}, "origin": {"x": 0.5, "y": 1.35, "z": 0.5}, "scale": 2.03},
+  "groundTransform": {"translation": {"x": 0, "y": 0, "z": 0}, "rotation": {"x": 0, "y": 0, "z": 90}, "origin": {"x": 0.34, "y": 1.12, "z": 0.5}, "scale": 3.1}
+}

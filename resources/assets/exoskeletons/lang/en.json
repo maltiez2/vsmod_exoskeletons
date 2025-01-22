@@ -4,6 +4,7 @@
   "item-exoskeleton-arms-unarmored-none-speed": "Arms exoskeleton (Speed)",
   "item-exoskeleton-arms-unarmored-none-torque": "Arms exoskeleton (Torque)",
   "item-exoskeleton-legs-unarmored-none-speed": "Legs exoskeleton (Speed)",
+  "item-exoskeleton-torso-unarmored-none-container": "Chest exoskeleton (Light & Storage)",
   "item-exoskeleton-arms-armored-iron-speed": "Arms armored exoskeleton (Speed, Iron)",
   "item-exoskeleton-arms-armored-iron-torque": "Arms armored exoskeleton (Torque, Iron)",
   "item-exoskeleton-legs-armored-iron-speed": "Legs armored exoskeleton (Speed, Iron)",
@@ -13,6 +14,11 @@
   "item-exoskeleton-arms-armored-steel-speed": "Arms armored exoskeleton (Speed, Steel)",
   "item-exoskeleton-arms-armored-steel-torque": "Arms armored exoskeleton (Torque, Steel)",
   "item-exoskeleton-legs-armored-steel-speed": "Legs armored exoskeleton (Speed, Steel)",
+  "item-exoskeleton-torso-armored-iron-container": "Chest armored exoskeleton (Iron)",
+  "item-exoskeleton-torso-armored-meteoriciron-container": "Chest armored exoskeleton (Meteoric Iron)",
+  "item-exoskeleton-torso-armored-steel-container": "Chest armored exoskeleton (Steel)",
+
+  "itemdesc-exoskeleton-torso-*-container": "Produces light when equiped. Can be toggled with a hotkey (L by default). Adds storage slots for temporal gears. Other equiped exoskeletons will refuel from these slots.<\br>",
 
   "setting-exo_unarmored_legs_fuel_capacity": "Fuel capacity (in-game hours)",
   "setting-exo_unarmored_fuel_efficiency": "Fuel efficiecny (in-game days per gear)",
