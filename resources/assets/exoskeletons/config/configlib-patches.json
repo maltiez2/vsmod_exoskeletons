@@ -9,17 +9,13 @@
         "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
         "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
       },
-      "exoskeletons:itemtypes/exoskeleton-arms-speed.json": {
-        "attributes/StatsWhenTurnedOn/manipulationSpeed": "exo_unarmored_arms_speed_manipulationSpeed",
-        "attributes/StatsWhenTurnedOn/steadyAim": "exo_unarmored_arms_speed_steadyAim",
-        "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
-        "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
-      },
-      "exoskeletons:itemtypes/exoskeleton-arms-torque.json": {
-        "attributes/StatsWhenTurnedOn/steadyAim": "exo_unarmored_arms_torque_steadyAim",
-        "attributes/StatsWhenTurnedOn/manipulationSpeed": "exo_unarmored_arms_torque_manipulationSpeed",
-        "attributes/StatsWhenTurnedOn/miningSpeedMul": "exo_unarmored_arms_torque_miningSpeedMul",
-        "attributes/StatsWhenTurnedOn/meleeWeaponsDamage": "exo_unarmored_arms_torque_meleeWeaponsDamage",
+      "exoskeletons:itemtypes/exoskeleton-arms.json": {
+        "attributes/StatsWhenTurnedOnByType/*-speed/manipulationSpeed": "exo_unarmored_arms_speed_manipulationSpeed",
+        "attributes/StatsWhenTurnedOnByType/*-speed/steadyAim": "exo_unarmored_arms_speed_steadyAim",
+        "attributes/StatsWhenTurnedOnByType/*-torque/steadyAim": "exo_unarmored_arms_torque_steadyAim",
+        "attributes/StatsWhenTurnedOnByType/*-torque/manipulationSpeed": "exo_unarmored_arms_torque_manipulationSpeed",
+        "attributes/StatsWhenTurnedOnByType/*-torque/miningSpeedMul": "exo_unarmored_arms_torque_miningSpeedMul",
+        "attributes/StatsWhenTurnedOnByType/*-torque/meleeWeaponsDamage": "exo_unarmored_arms_torque_meleeWeaponsDamage",
         "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
         "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
       },
@@ -34,17 +30,13 @@
         "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
         "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
       },
-      "exoskeletons:itemtypes/exoskeleton-arms-armored-speed.json": {
-        "attributes/StatsWhenTurnedOn/manipulationSpeed": "exo_armored_arms_speed_manipulationSpeed",
-        "attributes/StatsWhenTurnedOn/steadyAim": "exo_armored_arms_speed_steadyAim",
-        "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
-        "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
-      },
-      "exoskeletons:itemtypes/exoskeleton-arms-armored-torque.json": {
-        "attributes/StatsWhenTurnedOn/steadyAim": "exo_armored_arms_torque_steadyAim",
-        "attributes/StatsWhenTurnedOn/manipulationSpeed": "exo_armored_arms_torque_manipulationSpeed",
-        "attributes/StatsWhenTurnedOn/miningSpeedMul": "exo_armored_arms_torque_miningSpeedMul",
-        "attributes/StatsWhenTurnedOn/meleeWeaponsDamage": "exo_armored_arms_torque_meleeWeaponsDamage",
+      "exoskeletons:itemtypes/exoskeleton-arms-armored.json": {
+        "attributes/StatsWhenTurnedOnByType/*-speed/manipulationSpeed": "exo_armored_arms_speed_manipulationSpeed",
+        "attributes/StatsWhenTurnedOnByType/*-speed/steadyAim": "exo_armored_arms_speed_steadyAim",
+        "attributes/StatsWhenTurnedOnByType/*-torque/steadyAim": "exo_armored_arms_torque_steadyAim",
+        "attributes/StatsWhenTurnedOnByType/*-torque/manipulationSpeed": "exo_armored_arms_torque_manipulationSpeed",
+        "attributes/StatsWhenTurnedOnByType/*-torque/miningSpeedMul": "exo_armored_arms_torque_miningSpeedMul",
+        "attributes/StatsWhenTurnedOnByType/*-torque/meleeWeaponsDamage": "exo_armored_arms_torque_meleeWeaponsDamage",
         "attributes/FuelCapacityHours": "exo_unarmored_fuel_capacity",
         "attributes/FuelEfficiency": "exo_unarmored_fuel_efficiency"
       },
@@ -58,11 +50,7 @@
         "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
         "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
       },
-      "exoskeletons:itemtypes/exoskeleton-arms-speed.json": {
-        "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
-        "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
-      },
-      "exoskeletons:itemtypes/exoskeleton-arms-torque.json": {
+      "exoskeletons:itemtypes/exoskeleton-arms.json": {
         "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
         "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
       },
@@ -70,11 +58,7 @@
         "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
         "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
       },
-      "exoskeletons:itemtypes/exoskeleton-arms-armored-speed.json": {
-        "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
-        "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
-      },
-      "exoskeletons:itemtypes/exoskeleton-arms-armored-torque.json": {
+      "exoskeletons:itemtypes/exoskeleton-arms-armored.json": {
         "attributes/NeedsFuel": "exo_unarmored_requres_fuel",
         "attributes/ConsumeFuelWhileSleeping": "exo_consume_fuel_while_sleeping"
       },

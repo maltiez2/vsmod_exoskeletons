@@ -1,5 +1,4 @@
-﻿using Cairo;
-using CombatOverhaul;
+﻿using CombatOverhaul;
 using CombatOverhaul.Armor;
 using CombatOverhaul.DamageSystems;
 using System.Text;
@@ -57,12 +56,12 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
         if (slot?.Itemstack?.Attributes == null) return;
 
         slot.Itemstack.Attributes.SetDouble("fuelHours", Math.Max(0.0, hours + GetFuelHours(player, slot)));
-        
+
         if (GetFuelHours(player, slot) <= 0.0)
         {
             RefuelFromBag(player, slot);
         }
-        
+
         slot.OnItemSlotModified(sinkStack: null);
     }
     public double GetFuelHours(IPlayer player, ItemSlot slot)
@@ -161,7 +160,7 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
     public override void GetHeldItemInfo(ItemSlot inSlot, StringBuilder dsc, IWorldAccessor world, bool withDebugInfo)
     {
         base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
-        
+
         if (_stats.NeedsFuel)
         {
             double fuelHours = GetFuelHours((world as IClientWorldAccessor)?.Player, inSlot);
@@ -173,7 +172,7 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
 
             dsc.AppendLine();
         }
-        
+
         dsc.AppendLine(Lang.Get("combatoverhaul:armor-layers-info", ArmorType.LayersToTranslatedString()));
         dsc.AppendLine(Lang.Get("combatoverhaul:armor-zones-info", ArmorType.ZonesToTranslatedString()));
         if (Resists.Resists.Values.Any(value => value != 0))
@@ -282,7 +281,7 @@ public class LightSourceExoskeleton : WearableFueledLightSource, IAffectsPlayerS
         base.OnLoaded(api);
 
         _stats = Attributes.AsObject<ChestExoskeletonStats>();
-        
+
         if (!_stats.Layers.Any() || !_stats.Zones.Any())
         {
             return;
@@ -292,7 +291,7 @@ public class LightSourceExoskeleton : WearableFueledLightSource, IAffectsPlayerS
             _stats.Resists.ToDictionary(entry => Enum.Parse<EnumDamageType>(entry.Key), entry => entry.Value),
             _stats.FlatReduction.ToDictionary(entry => Enum.Parse<EnumDamageType>(entry.Key), entry => entry.Value));
     }
-    
+
     public Dictionary<string, float> PlayerStats(ItemSlot slot, EntityPlayer player)
     {
         if (TurnedOn(player.Player, slot))
