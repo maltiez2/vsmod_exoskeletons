@@ -24,11 +24,11 @@
     "ConsumeFuelWhileSleeping": false,
     "Layers": ["Outer"],
     "Zones": ["Arms", "Hands"],
-    "ResistsByType": {"*-*iron-*": {"PiercingAttack": 10, "SlashingAttack": 10, "BluntAttack": 4}, "*-steel-*": {"PiercingAttack": 12, "SlashingAttack": 12, "BluntAttack": 5}},
-    "FlatReductionByType": {"*-*iron-*": {"PiercingAttack": 1, "SlashingAttack": 0, "BluntAttack": 0}, "*-steel-*": {"PiercingAttack": 1, "SlashingAttack": 1, "BluntAttack": 0}},
+    "ResistsByType": {"*-*iron-*": {"PiercingAttack": 6, "SlashingAttack": 6, "BluntAttack": 5}, "*-steel-*": {"PiercingAttack": 7, "SlashingAttack": 7, "BluntAttack": 6}},
+    "FlatReductionByType": {"*-*iron-*": {"PiercingAttack": 0, "SlashingAttack": 0, "BluntAttack": 0}, "*-steel-*": {"PiercingAttack": 0, "SlashingAttack": 0, "BluntAttack": 0}},
     "StatsWhenTurnedOnByType": {
       "*-speed": {"manipulationSpeed": 0.3, "steadyAim": 0.1, "miningSpeedMul": 0, "meleeWeaponsDamage": 0},
-      "*-torque":  {"manipulationSpeed": -0.15, "steadyAim": 0.6, "miningSpeedMul": 0.3, "meleeWeaponsDamage": 0.2}
+      "*-torque": {"manipulationSpeed": -0.15, "steadyAim": 0.6, "miningSpeedMul": 0.3, "meleeWeaponsDamage": 0.2}
     },
     "StatsWhenTurnedOff": {"manipulationSpeed": -0.15, "steadyAim": -0.15, "miningSpeedMul": 0, "meleeWeaponsDamage": 0}
   },

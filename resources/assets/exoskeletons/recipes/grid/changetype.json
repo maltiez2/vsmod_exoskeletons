@@ -1,0 +1,112 @@
+[
+  {
+		"ingredientPattern": "ABC",
+		"recipeGroup": 1,
+		"ingredients": {
+			"A": {"type": "item", "code": "exoskeleton-arms-armored-iron-speed"},
+			"B": { "type": "item", "code": "armory:armor-arms-plate-*-vanilla", "name": "material", "allowedVariants": ["meteoriciron", "steel"] },
+			"C": { "type": "item", "code": "armory:armor-hands-plate-*-vanilla", "name": "material", "allowedVariants": ["meteoriciron", "steel"] }
+		},
+		"width": 3,
+		"height": 1,
+		"name": "exoskeleton",
+		"copyAttributesFrom": "A",
+		"output": { "type": "item", "code": "exoskeleton-arms-armored-{material}-speed"  }
+	},
+	{
+		"ingredientPattern": "ABC",
+		"recipeGroup": 1,
+		"ingredients": {
+			"A": {"type": "item", "code": "exoskeleton-arms-armored-iron-torque"},
+			"B": { "type": "item", "code": "armory:armor-arms-plate-*-vanilla", "name": "material", "allowedVariants": ["meteoriciron", "steel"] },
+			"C": { "type": "item", "code": "armory:armor-hands-plate-*-vanilla", "name": "material", "allowedVariants": ["meteoriciron", "steel"] }
+		},
+		"width": 3,
+		"height": 1,
+		"name": "exoskeleton",
+		"copyAttributesFrom": "A",
+		"output": { "type": "item", "code": "exoskeleton-arms-armored-{material}-torque"  }
+	},
+	{
+		"ingredientPattern": "ABC",
+		"recipeGroup": 1,
+		"ingredients": {
+			"A": {"type": "item", "code": "exoskeleton-legs-armored-iron-speed"},
+			"B": { "type": "item", "code": "armory:armor-legs-plate-*-vanilla", "name": "material", "allowedVariants": ["meteoriciron", "steel"] },
+			"C": { "type": "item", "code": "armory:armor-feet-plate-*-vanilla", "name": "material", "allowedVariants": ["meteoriciron", "steel"] }
+		},
+		"width": 3,
+		"height": 1,
+		"name": "exoskeleton",
+		"copyAttributesFrom": "A",
+		"output": { "type": "item", "code": "exoskeleton-legs-armored-{material}-speed"  }
+	},
+	{
+		"ingredientPattern": "AB",
+		"recipeGroup": 1,
+		"ingredients": {
+			"A": {"type": "item", "code": "exoskeleton-torso-armored-iron-container"},
+			"B": { "type": "item", "code": "armory:armor-torso-plate-*-vanilla", "name": "material", "allowedVariants": ["meteoriciron", "steel"] }
+		},
+		"width": 2,
+		"height": 1,
+		"name": "exoskeleton",
+		"copyAttributesFrom": "A",
+		"output": { "type": "item", "code": "exoskeleton-torso-armored-{material}-container"  }
+	},
+	  {
+		"ingredientPattern": "ABC",
+		"recipeGroup": 1,
+		"ingredients": {
+			"A": {"type": "item", "code": "exoskeleton-arms-armored-meteoriciron-speed"},
+			"B": { "type": "item", "code": "armory:armor-arms-plate-*-vanilla", "name": "material", "allowedVariants": ["steel"] },
+			"C": { "type": "item", "code": "armory:armor-hands-plate-*-vanilla", "name": "material", "allowedVariants": ["steel"] }
+		},
+		"width": 3,
+		"height": 1,
+		"name": "exoskeleton",
+		"copyAttributesFrom": "A",
+		"output": { "type": "item", "code": "exoskeleton-arms-armored-{material}-speed"  }
+	},
+	{
+		"ingredientPattern": "ABC",
+		"recipeGroup": 1,
+		"ingredients": {
+			"A": {"type": "item", "code": "exoskeleton-arms-armored-meteoriciron-torque"},
+			"B": { "type": "item", "code": "armory:armor-arms-plate-*-vanilla", "name": "material", "allowedVariants": ["steel"] },
+			"C": { "type": "item", "code": "armory:armor-hands-plate-*-vanilla", "name": "material", "allowedVariants": ["steel"] }
+		},
+		"width": 3,
+		"height": 1,
+		"name": "exoskeleton",
+		"copyAttributesFrom": "A",
+		"output": { "type": "item", "code": "exoskeleton-arms-armored-{material}-torque"  }
+	},
+	{
+		"ingredientPattern": "ABC",
+		"recipeGroup": 1,
+		"ingredients": {
+			"A": {"type": "item", "code": "exoskeleton-legs-armored-meteoriciron-speed"},
+			"B": { "type": "item", "code": "armory:armor-legs-plate-*-vanilla", "name": "material", "allowedVariants": ["steel"] },
+			"C": { "type": "item", "code": "armory:armor-feet-plate-*-vanilla", "name": "material", "allowedVariants": ["steel"] }
+		},
+		"width": 3,
+		"height": 1,
+		"name": "exoskeleton",
+		"copyAttributesFrom": "A",
+		"output": { "type": "item", "code": "exoskeleton-legs-armored-{material}-speed"  }
+	},
+	{
+		"ingredientPattern": "AB",
+		"recipeGroup": 1,
+		"ingredients": {
+			"A": {"type": "item", "code": "exoskeleton-torso-armored-meteoriciron-container"},
+			"B": { "type": "item", "code": "armory:armor-torso-plate-*-vanilla", "name": "material", "allowedVariants": ["steel"] }
+		},
+		"width": 2,
+		"height": 1,
+		"name": "exoskeleton",
+		"copyAttributesFrom": "A",
+		"output": { "type": "item", "code": "exoskeleton-torso-armored-{material}-container"  }
+	}
+]
