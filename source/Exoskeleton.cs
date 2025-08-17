@@ -1,6 +1,7 @@
 ﻿using CombatOverhaul;
 using CombatOverhaul.Armor;
 using CombatOverhaul.DamageSystems;
+using System.Diagnostics;
 using System.Text;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -33,6 +34,7 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
 {
     public ArmorType ArmorType { get; private set; }
     public DamageResistData Resists { get; private set; } = new();
+    public bool StatsChanged { get; set; } = false;
 
     public override void OnLoaded(ICoreAPI api)
     {
@@ -75,6 +77,7 @@ public class Exoskeleton : ItemWearable, IFueledItem, IAffectsPlayerStats, IArmo
     {
         if (slot?.Itemstack?.Attributes == null) return;
 
+        StatsChanged = true;
         fuelHours = GameMath.Clamp(fuelHours, 0, _stats.FuelCapacityHours);
         slot.Itemstack.Attributes.SetDouble("fuelHours", fuelHours);
         slot.MarkDirty();
@@ -275,6 +278,7 @@ public class LightSourceExoskeleton : WearableFueledLightSource, IAffectsPlayerS
 {
     public ArmorType ArmorType { get; private set; }
     public DamageResistData Resists { get; private set; } = new();
+    public bool StatsChanged { get; set; }
 
     public override void OnLoaded(ICoreAPI api)
     {

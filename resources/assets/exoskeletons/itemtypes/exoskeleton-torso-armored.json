@@ -28,8 +28,8 @@
     "FlatReductionByType": {"*-*iron-*": {"PiercingAttack": 0, "SlashingAttack": 0, "BluntAttack": 0}, "*-steel-*": {"PiercingAttack": 0, "SlashingAttack": 0, "BluntAttack": 0}},
     "StatsWhenTurnedOn": {"walkspeed": -0.05, "manipulationSpeed": 0, "steadyAim": 0, "healingeffectivness": -0.03, "hungerrate": 0.02},
     "StatsWhenTurnedOff": {"walkspeed": -0.05, "manipulationSpeed": 0, "steadyAim": 0, "healingeffectivness": -0.03, "hungerrate": 0.02},
-    "LightHsv": [10, 5, 15],
-    "TurnedOffLightHsv": [10, 5, 3]
+    "LightHsv": [10, 5, 18],
+    "TurnedOffLightHsv": [10, 5, 2]
   },
   "behaviors": [{"name": "CombatOverhaul:GearEquipableBag", "properties": {"canHoldWildcards": ["gear-temporal"], "color": "#84b054", "slotsNumber": 3}}],
   "durability": 11000,

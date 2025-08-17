@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ModName>Exoskeleton</ModName>
     <ModType>code</ModType>
-    <ModVersion>0.2.5</ModVersion>
+    <ModVersion>0.4.2</ModVersion>
     <ModId>exoskeletons</ModId>
     <Description></Description>
     <Side>Universal</Side>
@@ -31,7 +31,7 @@
 
   <!-- Project settings -->
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -76,7 +76,7 @@
   <ItemGroup>
     <PackageReference Include="VSImGui" Version="0.0.6" />
     <Reference Include="$(GameDirectory)/**/*.dll" Private="false" />
-    <Reference Include="$(ProjectDir)/../CombatOverhaul/bin/Release/Mods/combatoverhaul/CombatOverhaul.dll" Private="false" />
+    <Reference Include="$(ProjectDir)/../Overhaullib/bin/Release/Mods/overhaullib/Overhaullib.dll" Private="false" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Releases\" />
@@ -99,7 +99,6 @@
 
   "description": "$(Description)",
   "authors": [ @(ModInfoAuthors->'"%(Identity)"', ', ') ],
-  "translation": [ @(ModInfoTranslators->'"%(Identity)"', ', ') ],
 
   "dependencies": {
     @(Dependencies->'"%(Identity)": "%(Version)"', ', ')
