@@ -24,10 +24,10 @@
     "ConsumeFuelWhileSleeping": false,
     "Layers": ["Outer"],
     "Zones": ["Legs", "Feet"],
-    "ResistsByType": {"*-*iron-*": {"PiercingAttack": 6, "SlashingAttack": 6, "BluntAttack": 5}, "*-steel-*": {"PiercingAttack": 7, "SlashingAttack": 7, "BluntAttack": 6}},
+    "ResistsByType": {"*-*iron-*": {"PiercingAttack": 8, "SlashingAttack": 6, "BluntAttack": 6}, "*-steel-*": {"PiercingAttack": 9, "SlashingAttack": 7, "BluntAttack": 8}},
     "FlatReductionByType": {"*-*iron-*": {"PiercingAttack": 0, "SlashingAttack": 0, "BluntAttack": 0}, "*-steel-*": {"PiercingAttack": 0, "SlashingAttack": 0, "BluntAttack": 0}},
     "StatsWhenTurnedOn": {"walkspeed": 0.3, "fallDamageThreshold": 1, "jumpHeightMul": 1},
-    "StatsWhenTurnedOff": {"walkspeed": -0.2}
+    "StatsWhenTurnedOff": {"walkspeed": -0.25}
   },
   "behaviors": [],
   "durability": 11000,

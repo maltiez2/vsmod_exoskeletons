@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ModName>Exoskeleton</ModName>
     <ModType>code</ModType>
-    <ModVersion>0.4.2</ModVersion>
+    <ModVersion>0.4.3</ModVersion>
     <ModId>exoskeletons</ModId>
     <Description></Description>
     <Side>Universal</Side>
